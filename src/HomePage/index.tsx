@@ -19,8 +19,8 @@ const HomePage = () => {
           height={500}
           onUpdate={(err, result) => {
             if (result) {
-              setData(result);
-              console.log(result);
+              setData(result.getText());
+              console.log(result.getText());
             } else setData("Not Found");
           }}
           stopStream={stopStream}
