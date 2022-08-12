@@ -18,8 +18,10 @@ const HomePage = () => {
           width={500}
           height={500}
           onUpdate={(err, result) => {
-            if (result) setData(result);
-            else setData("Not Found");
+            if (result) {
+              setData(result);
+              console.log(result);
+            } else setData("Not Found");
           }}
           stopStream={stopStream}
         />
