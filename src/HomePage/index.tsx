@@ -20,13 +20,15 @@ const HomePage = () => {
           onUpdate={(err, result) => {
             if (result) {
               setData(result.getText());
+              setStopStream(true);
+              navigator.vibrate([300, 300, 300]);
               console.log(result.getText());
             } else setData("Not Found");
           }}
           stopStream={stopStream}
         />
       )}
-      <p>{data}</p>
+      <p className="result">{data}</p>
 
       <button onClick={toggleScannerModal}>dismiss</button>
     </div>
