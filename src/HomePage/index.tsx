@@ -20,7 +20,7 @@ const HomePage = () => {
           onUpdate={(err, result) => {
             if (result) {
               setData(result.getText());
-              setStopStream(true);
+              toggleScannerModal();
               navigator.vibrate([300, 300, 300]);
               console.log(result.getText());
             } else setData("Not Found");
