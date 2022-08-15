@@ -6,7 +6,7 @@ const HomePage = () => {
   const [stopStream, setStopStream] = useState(false);
   const [isScannerModal, setIsScannerModal] = useState(false);
   const [scannerSize, setscannerSize] = useState({
-    height: 200,
+    height: 300,
   });
 
   const [isCodebar, setIscodebar] = useState(true);
@@ -18,7 +18,7 @@ const HomePage = () => {
   };
 
   const selectCodebar = () => {
-    setscannerSize({ ...scannerSize, height: 200 });
+    setscannerSize({ ...scannerSize, height: 300 });
     setIscodebar(true);
     setIsQr(false);
   };
