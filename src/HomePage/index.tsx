@@ -80,7 +80,7 @@ const HomePage = () => {
       {isScannerModal && (
         <BarcodeScannerComponent
           // width={500}
-          // height={200}
+          height={200}
           onUpdate={(err, result) => {
             if (result) {
               setData(result.getText());
