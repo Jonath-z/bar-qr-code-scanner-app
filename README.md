@@ -5,11 +5,13 @@ This application is made with react (Typescript). It's working on production in 
 # Start the application locally
 
 - Clone the repo
-- ```script 
+- Install dependencies
+```
  npm install
 ```
+- Start the app
 
-- ```script  
+```
  npm start
 ``` 
 
