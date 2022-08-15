@@ -50,7 +50,7 @@ const HomePage = () => {
           } transition-all`}
           onClick={() => onSelectCodeType("codebar")}
         >
-          Codebar
+          Barcode
         </button>
         <button
           className={`border border-blue-500 px-5 py-2 rounded-3xl ${

@@ -5,7 +5,7 @@ const WelcomePage = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center gap-10">
       <p className="text-2xl text-center px-5 font-black">
-        Welcome to <span className="text-blue-500">codebar</span> scanner app
+        Welcome to <span className="text-blue-500">barcode</span> scanner app
       </p>
       <img src="/scanner-image.webp" alt="scanner" className="w-full " />
       <Link to="/home">
