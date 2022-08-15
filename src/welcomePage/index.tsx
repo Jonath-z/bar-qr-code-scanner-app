@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 const WelcomePage = () => {
   return (
-    <div>
-      <p className="welcome-text">
-        Welcome to <span className="code-span">code</span>
-        <span className="bar-span">bar</span> scanner app
+    <div className="h-screen flex flex-col justify-center items-center gap-10">
+      <p className="text-2xl text-center px-5">
+        Welcome to <span className="text-blue-500">codebar</span> scanner app
       </p>
+      <img src="/scanner-image.webp" alt="scanner" className="w-full " />
       <Link to="/home">
-        <button className="get-started-btn">Get started</button>
+        <button className="border px-10 py-2 bg-blue-500 text-white rounded-md">
+          Get started
+        </button>
       </Link>
     </div>
   );
