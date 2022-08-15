@@ -6,8 +6,7 @@ const HomePage = () => {
   const [stopStream, setStopStream] = useState(false);
   const [isScannerModal, setIsScannerModal] = useState(false);
   const [scannerSize, setscannerSize] = useState({
-    width: 200,
-    height: 500,
+    height: 200,
   });
 
   const [isCodebar, setIscodebar] = useState(true);
@@ -39,8 +38,12 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen gap-5">
-      <div className="w-full flex justify-around items-center absolute top-0 mt-10">
+    <div className="flex flex-col justify-center items-center h-screen gap-5 mx-5 font-bold">
+      <div
+        className={`w-full flex justify-around items-center absolute top-0 mt-10 ${
+          isScannerModal && "hidden"
+        }`}
+      >
         <button
           className={`border border-blue-500 px-5 py-2 rounded-3xl ${
             isCodebar ? "bg-blue-500 text-white " : "bg-white"
@@ -58,10 +61,18 @@ const HomePage = () => {
           QR code
         </button>
       </div>
+      <p
+        className={`bg-blue-500 text-white  py-2 rounded-sm w-[90%] text-center absolute top-0 mt-10 ${
+          !isScannerModal && "hidden"
+        }`}
+      >
+        {isScannerModal && isCodebar
+          ? "Codebar scanning"
+          : isScannerModal && isQr && "QR code scanning"}
+      </p>
       <div className="w-fit h-fit border rounded-sm">
         {isScannerModal && (
           <BarcodeScannerComponent
-            width={scannerSize.width}
             height={scannerSize.height}
             onUpdate={(err, result) => {
               if (result) {
