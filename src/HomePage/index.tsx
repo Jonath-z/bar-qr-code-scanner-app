@@ -70,22 +70,22 @@ const HomePage = () => {
           ? "Codebar scanning"
           : isScannerModal && isQr && "QR code scanning"}
       </p>
-      <div className="w-full h-28 border rounded-sm">
-        {isScannerModal && (
-          <BarcodeScannerComponent
-            // width={500}
-            // height={200}
-            onUpdate={(err, result) => {
-              if (result) {
-                setData(result.getText());
-                toggleScannerModal();
-                navigator.vibrate([300, 300, 300]);
-              } else setData("Not Found");
-            }}
-            stopStream={stopStream}
-          />
-        )}
-      </div>
+      {/* <div className="w-full h-28 border rounded-sm"> */}
+      {isScannerModal && (
+        <BarcodeScannerComponent
+          // width={500}
+          // height={200}
+          onUpdate={(err, result) => {
+            if (result) {
+              setData(result.getText());
+              toggleScannerModal();
+              navigator.vibrate([300, 300, 300]);
+            } else setData("Not Found");
+          }}
+          stopStream={stopStream}
+        />
+      )}
+      {/* </div> */}
 
       <p className="text-blue-500">{data}</p>
 
