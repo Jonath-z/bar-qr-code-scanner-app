@@ -37,8 +37,14 @@ const HomePage = () => {
     }
   };
 
+  const onError = (error: any) => {
+    if (error.name === "NotAllowedError") {
+      // Handle messaging in our app after the user chooses to not allow the camera permissions
+    }
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center h-screen gap-5 mx-5 font-bold">
+    <div className="flex flex-col justify-center items-center h-screen gap-5 mx-5 font-bold lg:mx-96">
       <div
         className={`w-full flex justify-around items-center absolute top-0 mt-10 ${
           isScannerModal && "hidden"
@@ -83,6 +89,7 @@ const HomePage = () => {
             } else setData("Not Found");
           }}
           stopStream={stopStream}
+          onError={onError}
         />
       )}
       {/* </div> */}
