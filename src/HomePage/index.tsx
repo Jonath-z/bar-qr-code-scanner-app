@@ -73,7 +73,8 @@ const HomePage = () => {
       <div className="w-fit h-fit border rounded-sm">
         {isScannerModal && (
           <BarcodeScannerComponent
-            height={isCodebar ? 200 : 500}
+            width={500}
+            height={200}
             onUpdate={(err, result) => {
               if (result) {
                 setData(result.getText());
