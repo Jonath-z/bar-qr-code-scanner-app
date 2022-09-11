@@ -21,3 +21,7 @@ This application is made with react (Typescript). It's working on production on 
 - Typescript
 - react-qr-barcode-scanner
 - Tailwind css
+
+## Note
+
+This app is made for mobile
